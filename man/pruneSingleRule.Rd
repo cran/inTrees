@@ -5,13 +5,12 @@
 internal
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-internal function
+internal
 }
 \usage{
-pruneSingleRule(rule, X, target, maxDecay = 0.05)
+pruneSingleRule(rule, X, target, maxDecay, typeDecay)
 }
-%- maybe also 'usage' for other objects documented here.
+% %- maybe also 'usage' for other objects documented here.
 % \arguments{
 %   \item{rule}{
 % %%     ~~Describe \code{rule} here~~
@@ -24,6 +23,9 @@ pruneSingleRule(rule, X, target, maxDecay = 0.05)
 % }
 %   \item{maxDecay}{
 % %%     ~~Describe \code{maxDecay} here~~
+% }
+%   \item{typeDecay}{
+% %%     ~~Describe \code{typeDecay} here~~
 % }
 % }
 % \details{
@@ -57,7 +59,7 @@ pruneSingleRule(rule, X, target, maxDecay = 0.05)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (rule, X, target, maxDecay = 0.05) 
+function (rule, X, target, maxDecay, typeDecay) 
 {
     newRuleMetric <- measureRule(rule["condition"], X, target)
     errOrig <- as.numeric(newRuleMetric["err"])
@@ -70,7 +72,13 @@ function (rule, X, target, maxDecay = 0.05)
         restRule <- paste(restRule, collapse = " & ")
         metricTmp <- measureRule(restRule, X, target, pred)
         errNew <- as.numeric(metricTmp["err"])
-        if ((errNew - errOrig)/max(errOrig, 1e-06) <= maxDecay) {
+        if (typeDecay == 1) {
+            decay <- (errNew - errOrig)/max(errOrig, 1e-06)
+        }
+        else {
+            decay <- (errNew - errOrig)
+        }
+        if (decay <= maxDecay) {
             ruleV <- ruleV[-i]
             newRuleMetric <- metricTmp
             if (length(ruleV) <= 1) 

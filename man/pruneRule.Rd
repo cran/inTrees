@@ -8,7 +8,7 @@ Prune irrevant variable-value pair from a rule condition
 Prune irrevant variable-value pair from a rule condition
 }
 \usage{
-pruneRule(rules, X, target)
+pruneRule(rules, X, target, maxDecay = 0.05, typeDecay = 2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -21,24 +21,24 @@ predictor variable matrix
   \item{target}{
 target variable vector
 }
+  \item{maxDecay}{
+threshold of decay
 }
-% \details{
-% %%  ~~ If necessary, more details than the description above ~~
-% }
+  \item{typeDecay}{
+1: relative error; 2: error; default :2
+}
+}
+
 \value{
 A matrix including the rules each being pruned, and metrics
 }
- \references{
- Houtao Deng, Interpreting Tree Ensembles with Intrees, technical report, 2014
- }
-% \author{
-% Houtao Deng
-% }
-%\note{
-%%  ~~further notes~~
-%}
+\references{
+ Houtao Deng, Interpreting Tree Ensembles with inTrees, technical report, 2014
+}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+\author{
+Houtao Deng
+}
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~

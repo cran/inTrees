@@ -8,7 +8,7 @@ internal
 internal
 }
 \usage{
-measureRule(ruleExec, X, target, pred = NULL)
+measureRule(ruleExec, X, target, pred = NULL, regMethod = "mean")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -22,6 +22,9 @@ measureRule(ruleExec, X, target, pred = NULL)
 %%     ~~Describe \code{target} here~~
 }
   \item{pred}{
+%%     ~~Describe \code{pred} here~~
+}
+  \item{regMethod}{
 %%     ~~Describe \code{pred} here~~
 }
 }

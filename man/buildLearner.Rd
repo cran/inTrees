@@ -31,12 +31,12 @@ minimum frequency of a rule condition in order to be included in STEL.
 \value{
 	a matrix including the conditions, prediction, and metrics, ordered by priority.
 }
-% \references{
-% Houtao Deng, Interpreting Tree Ensembles with Intrees, technical report, 2014
-% }
-% \author{
-% Houtao Deng
-% }
+ \references{
+ Houtao Deng, Interpreting Tree Ensembles with inTrees, technical report, 2014
+ }
+ \author{
+ Houtao Deng
+ }
 % \note{
 % %%  ~~further notes~~
 % }
@@ -62,9 +62,10 @@ learner <- buildLearner(ruleMetric,X,target)
 pred <- applyLearner(learner,X)
 read <- presentRules(learner,colnames(X)) # more readable format
 
-#format the rule and metrics as a table in latex code
-#library(xtable)
-#print(xtable(stelRead), include.rownames=FALSE)
+# format the rule and metrics as a table in latex code
+library(xtable)
+print(xtable(read), include.rownames=FALSE)
+print(xtable(ruleMetric[1:2,]), include.rownames=FALSE)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
