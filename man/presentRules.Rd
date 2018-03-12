@@ -8,7 +8,7 @@ Present a learner using column names instead of X[i,]
 Present a learner using column names instead of X[i,]
 }
 \usage{
-presentRules(rules, colN)
+presentRules(rules, colN, digits)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -19,6 +19,11 @@ a set of rules
   \item{colN}{
 a vector including the column names
 }
+
+  \item{digits}{
+digits for rounding
+}
+
 }
 % \details{
 % %%  ~~ If necessary, more details than the description above ~~

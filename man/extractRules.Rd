@@ -8,7 +8,7 @@ Extract rules from a list of trees
 Extract rule conditions from a list of trees. Use functions RF2List/GBM2List to transform RF/GBM objects to list of trees. 
 }
 \usage{
-extractRules(treeList, X, ntree = 100, maxdepth = 6, random = FALSE)
+extractRules(treeList, X, ntree = 100, maxdepth = 6, random = FALSE, digits = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -30,6 +30,10 @@ conditions are extracted from the top maxdepth levels from each tree
   \item{random}{
 %%     ~~Describe \code{random} here~~
 the max depth for each tree is an integer randomly chosen between 1 and maxdepth
+}
+  \item{digits}{
+%%     ~~Describe \code{random} here~~
+digits for rounding
 }
 }
 % \details{
@@ -60,7 +64,7 @@ the max depth for each tree is an integer randomly chosen between 1 and maxdepth
     target <- iris[,"Species"] 
     rf <- RRF(X,as.factor(target),ntree=100) # build an ordinary RF 
     treeList <- RF2List(rf)
-    ruleExec <- extractRules(treeList,X) # transform to R-executable rules
+    ruleExec <- extractRules(treeList,X,digits=4) # transform to R-executable rules
     ruleExec <- unique(ruleExec)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
