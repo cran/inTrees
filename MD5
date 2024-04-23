@@ -1,10 +1,10 @@
-cbdd23ab3777e22f95b3c0092187e7ae *DESCRIPTION
+e537570b25696346f03b8b1fefa7bd33 *DESCRIPTION
 a11af7b86ee7528c40129b4e5cadf4b2 *NAMESPACE
-5d5cdc32a5af0358c86df3cdc94d9094 *NEWS
+bfa777c6107a23e824faafd721cd2f26 *NEWS
 af195a296555c843fc15f57cac3275a8 *R/GBM2List.R
 20ad1d7f4f3db9a737528028af352b03 *R/Num2Level.R
 61d02dffeab36577fad442cc6e83a05d *R/RF2List.R
-849bf20485c3f74c2c5730c85056742e *R/XGB2List.R
+849bf20485c3f74c2c5730c85056742e *R/XGB2LIST.R
 250d3686ae4eb683f278146039f3bf07 *R/applyLearner.R
 b0a1c1a45991a9bed75366c13e6f70eb *R/buildLearner.R
 6f4c77bb4160da683d7d839baba7b58f *R/computeRuleInfor.R
@@ -48,7 +48,7 @@ e442c9e9fac329a37b365513abaecee4 *man/pruneRule.Rd
 aa04ec2f54f2b112bee6745773f1cd10 *man/pruneSingleRule.Rd
 06c4ac97013431a6e697f8c76f01a6dc *man/rule2Table.Rd
 9a316443db869b47b14e8cf75fede12d *man/ruleList2Exec.Rd
-3c7acd9f6e198a5d8b2d29a8c9e68786 *man/selectRuleRRF.Rd
+b15bd2e64f3a1bf1a103892f3d26843f *man/selectRuleRRF.Rd
 b1ace661d7caff634832ff2913b32b73 *man/singleRuleList2Exec.Rd
 def6ff416aff181612fb01d3c9a1a87f *man/sortRule.Rd
 781c80efa8aacc1275eb93f3c1f1fbad *man/treeVisit.Rd
